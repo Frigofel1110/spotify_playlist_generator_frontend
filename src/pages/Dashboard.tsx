@@ -3,10 +3,7 @@ import { Button } from "../components/ui/button";
 import User from "@/interfaces/user";
 
 async function login() {
-  fetch("https://monapi.onrender.com/auth/login", {
-  method: "GET",
-  credentials: "include",
-});
+
   window.location.href = "https://spotify-playlist-generator-backend.onrender.com/auth/login";
 }
 

@@ -58,7 +58,7 @@ export default function Dashboard() {
           <>
             <div>Bonjour {userData.displayName}</div>
             <Button onClick={logout}> Logout</Button>
-            <Button onClick={playlistPage}> Playlist generator</Button>
+            <Button onClick={playlistPage}> Playlist generator!</Button>
           </>
         )}
       </h1>

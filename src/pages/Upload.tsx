@@ -4,7 +4,7 @@ async function uploadImage(file: File) {
   const formData = new FormData();
   formData.append("image", file);
 
-  const response = await fetch("http://127.0.0.1:3000/api/ocr/upload", {
+  const response = await fetch("https://spotify-playlist-generator-backend.onrender.com/api/ocr/upload", {
     method: "POST",
     credentials: "include",
     body: formData,
@@ -17,7 +17,7 @@ async function uploadImage(file: File) {
 
 async function createPlaylist(songs: string[], playlistName: string) {
   const response = await fetch(
-    "http://127.0.0.1:3000/api/generator/create-from-songs",
+    "https://spotify-playlist-generator-backend.onrender.com/api/generator/create-from-songs",
     {
       method: "POST",
       credentials: "include",

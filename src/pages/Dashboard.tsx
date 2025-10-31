@@ -3,15 +3,15 @@ import { Button } from "../components/ui/button";
 import User from "@/interfaces/user";
 
 async function login() {
-  window.location.href = "http://127.0.0.1:3000/auth/login";
+  window.location.href = "https://spotify-playlist-generator-backend.onrender.com/auth/login";
 }
 
 async function playlistPage() {
-  window.location.href = "http://127.0.0.1:5173/Upload";
+  window.location.href = "/Upload";
 }
 
 async function logout() {
-  await fetch("http://127.0.0.1:3000/auth/logout", {
+  await fetch("https://spotify-playlist-generator-backend.onrender.com/auth/logout", {
     method: "POST",
     credentials: "include",
   });
@@ -33,7 +33,7 @@ export default function Dashboard() {
   });
 
   async function getSessionData() {
-    const response = await fetch("http://127.0.0.1:3000/auth/me", {
+    const response = await fetch("https://spotify-playlist-generator-backend.onrender.com/auth/me", {
       credentials: "include",
     });
 
